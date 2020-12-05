@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Content Aggregator</title>
+    </head>
+    {% csrf_token %}
+    <body>
+        <p>Microsoft Blog</p>
+        <ul>
+            {% for b in blog_list %}
+            <li>
+                <a href={{ b.link }}><p>{{ b.title }}</p></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
