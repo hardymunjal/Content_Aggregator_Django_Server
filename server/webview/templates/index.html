@@ -1,10 +1,17 @@
 <html>
     <head>
+        {% load static %}
         <title>Content Aggregator</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     </head>
     {% csrf_token %}
     <body>
-        <div id="microsoft_container">
+        <div id="header_container">
+            <div id="header">
+                <p>Content Aggregator</p>
+            </div>
+        </div>
+        <div id="microsoft_container" class="bc">
             <h2>Microsoft Blog</h2>
             <ul>
                 {% for b in microsoft %}
@@ -14,10 +21,20 @@
                 {% endfor %}
             </ul>
         </div>
-        <div id="mlm_container">
+        <div id="mlm_container" class="bc">
             <h2>Machine Learning Mastery Blog</h2>
             <ul>
                 {% for b in mlm %}
+                <li>
+                    <a href={{ b.link }} rel="noopener noreferrer" target="_blank"><p>{{ b.title }}</p></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="spectator_container" class="bc">
+            <h2>The Spectator Blog</h2>
+            <ul>
+                {% for b in spectator %}
                 <li>
                     <a href={{ b.link }} rel="noopener noreferrer" target="_blank"><p>{{ b.title }}</p></a>
                 </li>

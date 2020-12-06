@@ -1,0 +1,29 @@
+div#header_container {
+    position: sticky;
+    width: -webkit-fill-available;
+    background-color: cornflowerblue;
+    height: 7%;
+}
+
+div#header {
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    top: 10%;
+}
+
+.bc {
+    float: left;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    background-color: antiquewhite;
+    margin: 2% 2% 0 2%;
+    padding: 2%;
+    border-radius: 10%;
+}
+
+h2{
+    padding-left:2%
+}
+
