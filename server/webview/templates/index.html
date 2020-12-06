@@ -4,13 +4,25 @@
     </head>
     {% csrf_token %}
     <body>
-        <p>Microsoft Blog</p>
-        <ul>
-            {% for b in blog_list %}
-            <li>
-                <a href={{ b.link }}><p>{{ b.title }}</p></a>
-            </li>
-            {% endfor %}
-        </ul>
+        <div id="microsoft_container">
+            <h2>Microsoft Blog</h2>
+            <ul>
+                {% for b in microsoft %}
+                <li>
+                    <a href={{ b.link }} rel="noopener noreferrer" target="_blank"><p>{{ b.title }}</p></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="mlm_container">
+            <h2>Machine Learning Mastery Blog</h2>
+            <ul>
+                {% for b in mlm %}
+                <li>
+                    <a href={{ b.link }} rel="noopener noreferrer" target="_blank"><p>{{ b.title }}</p></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </body>
 </html>

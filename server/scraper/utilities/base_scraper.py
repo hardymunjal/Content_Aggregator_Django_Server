@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 class BaseScraper:
     def __init__(self, url):
         self.url = url
-        res = requests.get(self.url)
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        res = requests.get(self.url, headers = headers)
         self.html = res.text
         self.bs_obj = BeautifulSoup(self.html, 'html.parser')
         print("********************************************************")

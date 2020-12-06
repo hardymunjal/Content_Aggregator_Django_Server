@@ -11,7 +11,8 @@ class MicrosoftScraper(BaseScraper):
         h3_div = blogs_div.find_all("h3")
         for h in h3_div[0:count]:
             if h.get("id") is not None:
-                title = h.get("id")
+                title_raw = h.get("id")
+                title = " ".join(title_raw.split("-")).title()
                 link = h.find("a").get("href")
                 blogs_list.append({
                     "title": title,
