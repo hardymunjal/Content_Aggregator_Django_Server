@@ -13,7 +13,8 @@ def test(request):
 @csrf_exempt
 def index(request):
     context={}
-    microsoft_blog_list, mlm_blog_list = get_all_blogs()
+    microsoft_blog_list, mlm_blog_list, scraper_blog_list = get_all_blogs()
     context["microsoft"] = microsoft_blog_list
     context["mlm"] = mlm_blog_list
+    context["spectator"] = scraper_blog_list
     return render(request, "index.html", context)
