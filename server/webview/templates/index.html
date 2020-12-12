@@ -41,5 +41,15 @@
                 {% endfor %}
             </ul>
         </div>
+        <div id="fastml_container" class="bc">
+            <h2>The Spectator Blog</h2>
+            <ul>
+                {% for f in fastml %}
+                <li>
+                    <a href={{ f.link }} rel="noopener noreferrer" target="_blank"><p>{{ f.title }}</p></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </body>
 </html>

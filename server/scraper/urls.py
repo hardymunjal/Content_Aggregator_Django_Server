@@ -8,4 +8,6 @@ urlpatterns = [
     url(r'mlm', views.get_mlm_blog),
     url(r'spectator/(\d+)', views.get_spectator_blog),
     url(r'spectator', views.get_spectator_blog),
+    url(r'fastml/(\d+)', views.get_fastml_blog),
+    url(r'fastml', views.get_fastml_blog),
 ]
